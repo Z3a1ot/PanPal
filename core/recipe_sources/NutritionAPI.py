@@ -10,7 +10,6 @@ NUTRITION_API_KEY_FILE = os.path.abspath(os.path.join("..", "..", "resources", "
 
 class NutritionAPI(RecipeSource):
 
-
     base_url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"
 
     def __init__(self):

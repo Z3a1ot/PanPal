@@ -18,5 +18,6 @@ class GTTSEngine(object):
         output_audio_file = os.path.join(self._temp_dir, hashed_text, ".mp3")
         tts.save(output_audio_file)
 
+        # TODO : use an engine to run audio files
         os.system("open {}".format(output_audio_file))
 
