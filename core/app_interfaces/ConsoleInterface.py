@@ -51,13 +51,13 @@ class ConsoleInterface(object):
 
         self._instruction_list = self._recipe_source.get_recipe_instructions(self._recipe_list[recipe_id].id)
         self._instruction_index = 0
-        self._tts_engine.play_text("Starting recipe: {}".format(self._recipe_list[recipe_id].name))
+        self._tts_engine.play_text(u"Starting recipe: {}".format(self._recipe_list[recipe_id].name))
 
     def play_current_instruction(self):
         if self._instruction_index == len(self._instruction_list):
             raise InvalidFLowExpcetion("Recipe is done")
         current_instruction = self._instruction_list[self._instruction_index]
-        sys.stdout.write("{}{}".format(current_instruction, os.linesep))
+        sys.stdout.write(u"{}{}".format(current_instruction, os.linesep))
         self._tts_engine.play_text(current_instruction)
 
     def next_instruction(self):
@@ -76,7 +76,6 @@ class ConsoleInterface(object):
                 if len(input_list) == 0:
                     continue
                 cmd = input_list[0]
-                print(cmd)
                 if cmd == EXIT_COMMAND:
                     break
                 elif cmd == "help" or cmd == "?":
