@@ -5,7 +5,7 @@ from typing import List
 from core.recipe_sources.Recipe import Recipe
 from core.recipe_sources.RecipeSource import RecipeSource
 
-NUTRITION_API_KEY_FILE = os.path.abspath(os.path.join("..", "..", "resources", "nutrition_api.key"))
+NUTRITION_API_KEY_FILE = os.path.join(os.path.dirname(__file__), "..", "..", "resources", "nutrition_api.key")
 
 
 class NutritionAPI(RecipeSource):

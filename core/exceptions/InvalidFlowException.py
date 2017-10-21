@@ -1,0 +1,2 @@
+class InvalidFLowExpcetion(Exception):
+    pass
