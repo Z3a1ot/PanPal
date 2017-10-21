@@ -1,2 +1,2 @@
-class InvalidFLowExpcetion(Exception):
+class InvalidFLowException(Exception):
     pass
