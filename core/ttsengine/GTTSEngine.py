@@ -16,7 +16,7 @@ class GTTSEngine(object):
     def play_text(self, text):
 
         tts = gTTS(text=text, lang="en")
-        hashed_text = hashlib.md5(text).hexdigest()
+        hashed_text = hashlib.md5(text.encode("utf-8")).hexdigest()
         output_audio_file = os.path.join(self._temp_dir, hashed_text + ".mp3")
         tts.save(output_audio_file)
 
